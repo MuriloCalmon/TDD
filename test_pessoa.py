@@ -13,6 +13,8 @@ class Pessoa
 import unittest
 from unittest.mock import patch
 from pessoas import Pessoa
+
+
 class TestePessoa(unittest.TestCase):
 
     def setUp(self):
@@ -22,7 +24,7 @@ class TestePessoa(unittest.TestCase):
         self.pessoa2 = Pessoa('Esther', 'Silva')
         self.pessoa3 = Pessoa('Igor', 'Santos')
         self.pessoas = (self.pessoa1, self.pessoa2, self.pessoa3)
-    
+
     def teste_pessoa_attr_nome_tem_o_valor_correto(self):
 
         for pessoa in self.pessoas:
@@ -52,7 +54,6 @@ class TestePessoa(unittest.TestCase):
                 self.assertIsInstance(pessoa.sobrenome, str)
 
     def teste_pessoa_attr_sobrenome_tem_o_valor_correto(self):
-        
         for pessoa in self.pessoas:
             if pessoa.sobrenome == self.sobrenomes[0]:
                 self.assertEqual(pessoa.sobrenome, 'Calmon')
@@ -71,7 +72,8 @@ class TestePessoa(unittest.TestCase):
 
             for pessoa in self.pessoas:
 
-                self.assertAlmostEqual(pessoa.obter_todos_os_dados(), 'Conectado')
+                self.assertAlmostEqual(pessoa.obter_todos_os_dados(), 'Co\
+                    nectado')
                 self.assertTrue(pessoa.dados_obtidos)
 
     def teste_obter_todos_os_dados_erro_404(self):
@@ -80,7 +82,8 @@ class TestePessoa(unittest.TestCase):
 
             for pessoa in self.pessoas:
 
-                self.assertAlmostEqual(pessoa.obter_todos_os_dados(), 'Erro 404')
+                self.assertAlmostEqual(pessoa.obter_todos_os_dados(), 'E\
+                    rro 404')
                 self.assertFalse(pessoa.dados_obtidos)
 
     def teste_obter_todos_os_dados_sucesso_falha_sequencial(self):

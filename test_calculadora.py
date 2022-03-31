@@ -1,6 +1,7 @@
 import unittest
 from calculadora import soma, subtrai
 
+
 class TesteCalculadora(unittest.TestCase):
     def test_soma_20_e_20_deve_retornar_40(self):
         self.assertEqual(soma(20, 20), 40)
@@ -21,16 +22,13 @@ class TesteCalculadora(unittest.TestCase):
                 a, b, saida = a_b_saida
                 self.assertEqual(soma(a, b), saida)
 
-
-    def test_soma_a_precisa_ser_int_ou_float_deve_retornat_assertionerror(self):
+    def test_soma_a_precisa_ser_int_ou_float_return_assertionerror(self):
         with self.assertRaises(AssertionError):
             soma('a', 5)
 
-
-    def test_soma_b_precisa_ser_int_ou_float_deve_retornat_assertionerror(self):
+    def test_soma_b_precisa_ser_int_ou_float_return_assertionerror(self):
         with self.assertRaises(AssertionError):
             soma(10, '5')
-            
 
     def test_subtrai_50_e_20_deve_retornar_30(self):
         self.assertEqual(subtrai(50, 20), 30)
@@ -52,12 +50,11 @@ class TesteCalculadora(unittest.TestCase):
                 a, b, saida = a_b_saida
                 self.assertEqual(subtrai(a, b), saida)
 
-    def test_subtrai_a_precisa_ser_int_ou_float_deve_retornat_assertionerror(self):
+    def test_subtrai_a_precisa_ser_int_ou_float_return_assertionerror(self):
         with self.assertRaises(AssertionError):
             subtrai('50', 5)
 
-
-    def test_subtrai_b_precisa_ser_int_ou_float_deve_retornat_assertionerror(self):
+    def test_subtrai_b_precisa_ser_int_ou_float_return_assertionerror(self):
         with self.assertRaises(AssertionError):
             subtrai(10, '2')
 
