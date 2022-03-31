@@ -1,6 +1,6 @@
-def soma(a , b):
+def soma(a, b):
     """Soma a e b
-    
+
     >>> soma(10, 20)
     30
 
@@ -16,6 +16,7 @@ def soma(a , b):
     assert isinstance(b, (int, float)), 'b precisa ser int ou float'
     return a + b
 
+
 def subtrai(a, b):
     """Subtrai a e b
 
@@ -27,6 +28,7 @@ def subtrai(a, b):
     assert isinstance(a, (int, float)), 'a precisa ser int ou float'
     assert isinstance(b, (int, float)), 'b precisa ser int ou float'
     return a - b
+
 
 if __name__ == '__main__':
     import doctest

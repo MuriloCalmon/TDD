@@ -10,6 +10,7 @@
     Ovos
 """
 
+
 def bacon_com_ovos(n):
     assert isinstance(n, int), 'n pode ser inteiro'
     if n % 3 == 0 and n % 5 == 0:
@@ -20,5 +21,3 @@ def bacon_com_ovos(n):
         return 'Ovos'
     else:
         return 'Passa fome'
-
-    
